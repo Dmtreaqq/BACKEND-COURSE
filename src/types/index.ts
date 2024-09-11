@@ -9,7 +9,7 @@ export type Video = {
     availableResolutions: VideoResolutions | null;
 }
 
-enum VideoResolutions {
+export enum VideoResolutions {
     P144 = 'P144',
     P240 = 'P240',
     P360 = 'P360',
