@@ -1,3 +1,12 @@
+export type ApiErrorResult = {
+    errorsMessages: FieldError[]
+}
+
+export type FieldError = {
+    message: string;
+    field: string;
+}
+
 export type Video = {
     id: number;
     title: string;
