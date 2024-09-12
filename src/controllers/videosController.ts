@@ -2,7 +2,7 @@ import { Router, Request, Response } from 'express';
 import videosDB from "../db";
 import { createVideoValidationSchema } from "../schemas/createVideoValidationSchema";
 import { validationMiddleware } from "../middlewares/validationMiddleware";
-import { RequestWbody, RequestWparams, RequestWparamsAndBody, RequestWquery, Video } from "../types";
+import { RequestWbody, RequestWparams, RequestWparamsAndBody, Video } from "../types";
 import { getVideoValidationSchema } from "../schemas/getVideoValidationSchema";
 import { CreateVideoInputModel } from "../models/CreateVideoInputModel";
 import { UpdateVideoInputModel } from "../models/UpdateVideoInputModel";

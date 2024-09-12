@@ -4,6 +4,7 @@ dotenv.config();
 export const CONFIG = {
     PORT: process.env.PORT || 3006,
     PATH: {
-        VIDEOS: '/videos'
+        VIDEOS: '/videos',
+        TESTING: '/testing',
     }
 }
