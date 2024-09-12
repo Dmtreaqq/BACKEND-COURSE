@@ -45,6 +45,10 @@ export const validationMiddleware = (schema: any) => {
                 if (rules.type === 'number' && (value < rules.min || value > rules.max) ) {
                     errors.push({ message: `Field must be between ${rules.min} and ${rules.max}`, field });
                 }
+
+                if (rules.type === 'string' && (value.length > rules.maxLength)) {
+                    errors.push({ message: `Field must be not longer than ${rules.maxLength}`, field });
+                }
             }
         }
 
