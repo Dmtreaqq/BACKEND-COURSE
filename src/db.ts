@@ -1,6 +1,6 @@
 import { Video } from "./types";
 
-const videosDB: Video[] = [{
+const video = {
     id: 1,
     title: 'Doctor Who',
     author: 'Steven Moffat',
@@ -9,6 +9,8 @@ const videosDB: Video[] = [{
     createdAt: new Date().toISOString(),
     publicationDate: new Date().toISOString(),
     availableResolutions: null
-}];
+}
+
+const videosDB: Video[] = [];
 
 export default videosDB;
