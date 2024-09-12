@@ -1,3 +1,5 @@
+import { Request } from 'express'
+
 export type ApiErrorResult = {
     errorsMessages: FieldError[]
 }
@@ -6,6 +8,11 @@ export type FieldError = {
     message: string;
     field: string;
 }
+
+export type RequestWbody<T> = Request<{}, {}, T>
+export type RequestWquery<T> = Request<{}, {}, {}, T>
+export type RequestWparams<T> = Request<T>
+export type RequestWparamsAndBody<T, L> = Request<T, {}, L>
 
 export type Video = {
     id: number;

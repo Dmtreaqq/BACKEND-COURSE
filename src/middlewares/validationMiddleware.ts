@@ -41,6 +41,10 @@ export const validationMiddleware = (schema: any) => {
                 if (rules.type !== typeof value) {
                     errors.push({ message: `Field must be a ${rules.type} type`, field });
                 }
+
+                if (rules.type === 'number' && (value < rules.min || value > rules.max) ) {
+                    errors.push({ message: `Field must be between ${rules.min} and ${rules.max}`, field });
+                }
             }
         }
 
